@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bootstrap3 Componets Tutorial</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+
+    </style>
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <div class="jumbotron">
+        <h1>Bootstrap3 Components Tutorial</h1>
+        <p>このチュートリアルはBootstrap3のコンポーネントチュートリアルです。</p>
+        <p>ソースコードのダウンロードは <a href="https://github.com/takeshi-du/Bootstrap3-tutorials" class="btn btn-primary">こちら</a></p>
+      </div>
+
+      <!--=================================================
+                            Dropdown
+      ==================================================-->
+
+      <h2>Basic Dropdown</h2>
+      <div class="dropdown">
+
+        <!-- ここが表示されるボタン <a>タグでもOK -->
+        <a class="btn btn-default dropdown-toggle" id="sample-menu-1" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </a>
+        <!-- ボタンここまで -->
+
+        <!-- ここはボタンを押すと表示されるリスト -->
+        <ul class="dropdown-menu" role="menu" aria-labelledby="sample-menu-1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+        <!-- リストここまで -->
+
+      </div>
+
+      <h2>Dropdown Headers & Disabled</h2>
+      <div class="dropdown">
+
+        <!-- ここが表示されるボタン <a>タグでもOK -->
+        <a class="btn btn-default dropdown-toggle" id="sample-menu-2" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </a>
+        <!-- ボタンここまで -->
+
+        <!-- ここはボタンを押すと表示されるリスト -->
+        <ul class="dropdown-menu" role="menu" aria-labelledby="sample-menu-2">
+          <li role="presentation" class="dropdown-header">Dropdown header1</li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation" class="dropdown-header">Dropdown header2</li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+          <li role="presentation" class="divider"></li>
+          <li class="disabled" role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+          <li class="disabled" role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+        <!-- リストここまで -->
+
+      </div>
+
+      <hr>
+
+
+      <!--=================================================
+                      Button & Button Group
+      ==================================================-->
+      <h2>Basic Button</h2>
+      <ul class="list-inline">
+        <li>
+          <!-- aタグをボタンにする -->
+          <a href="#" class="btn btn-default">a tag</a>
+        </li>
+        <li>
+          <!-- buttonタグをボタンにする -->
+          <button href="#" class="btn btn-default">button tag</button>
+        </li>
+        <li>
+          <!-- xsサイズのボタン -->
+          <button href="#" class="btn btn-default btn-xs">size xs</button>
+        </li>
+        <li>
+          <!-- smサイズのボタン -->
+          <button href="#" class="btn btn-default btn-sm">size sm</button>
+        </li>
+        <li>
+          <!-- lgサイズのボタン -->
+          <button href="#" class="btn btn-default btn-lg">size lg</button>
+        </li>
+      </ul>
+
+      <h2>Button Style</h2>
+      <ul class="list-inline">
+        <li>
+          <!-- デフォルトスタイル -->
+          <a href="#" class="btn btn-default">btn-default</a>
+        </li>
+        <li>
+          <!-- 青いボタン -->
+          <button href="#" class="btn btn-primary">btn-primary</button>
+        </li>
+        <li>
+          <!-- 緑のボタン -->
+          <button href="#" class="btn btn-success">btn-success</button>
+        </li>
+        <li>
+          <!-- 水色のボタン -->
+          <button href="#" class="btn btn-info">btn-info</button>
+        </li>
+        <li>
+          <!-- オレンジのボタン -->
+          <button href="#" class="btn btn-warning">btn-warning</button>
+        </li>
+        <li>
+          <!-- 赤いボタン -->
+          <button href="#" class="btn btn-danger">btn-danger</button>
+        </li>
+        <li>
+          <!-- オリジナルスタイル -->
+          <button href="#" class="btn btn-origin">btn-origin</button>
+        </li>
+      </ul>
+
+      <h2>Button Group</h2>
+
+      <!-- btn-groupでグループ化 -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+
+      <!-- lg -->
+      <div class="btn-group btn-group-lg">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+
+      <!-- sm -->
+      <div class="btn-group btn-group-sm">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+
+      <!-- xs -->
+      <div class="btn-group btn-group-xs">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+
+      <h2>Button Toolbar</h2>
+      <div class="btn-toolbar">
+
+        <!-- OSのアイコン -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><i class="fa fa-android"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-apple"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-windows"></i></button>
+        </div>
+
+        <!-- 音楽プレイヤーの操作 -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><i class="fa fa-fast-backward"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-pause"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-play"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-fast-forward"></i></button>
+        </div>
+
+        <!-- 文字列の操作 -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><i class="fa fa-font"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-italic"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-underline"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-text-width"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-text-height"></i></button>
+        </div>
+
+      </div>
+
+      <hr>
+
+
+      <!--=================================================
+                             Navbar
+      ==================================================-->
+
+      <h2>Basic Navbar</h2>
+
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+
+          <!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+          <div class="navbar-header">
+
+            <!--
+              メニューボタン
+
+              data-toggle : ボタンを押したときにNavbarを開かせるために必要
+              data-target : 複数navbarを作成する場合、ボタンとナビを紐づけるために必要
+            -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!-- タイトルなどのテキスト -->
+            <a class="navbar-brand" href="#">Designup.jp</a>
+
+          </div>
+
+          <!-- グローバルナビの中身 -->
+          <div class="collapse navbar-collapse" id="nav-menu-1">
+
+            <!-- 各ナビゲーションメニュー -->
+            <ul class="nav navbar-nav">
+
+              <!-- 通常のリンク -->
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+
+              <!-- ドロップダウンのメニューも配置可能 -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+      <h2>Other Navbar</h2>
+
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+
+          <!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+          <div class="navbar-header">
+
+            <!--
+              メニューボタン
+
+              data-toggle : ボタンを押したときにNavbarを開かせるために必要
+              data-target : 複数navbarを作成する場合、ボタンとナビを紐づけるために必要
+            -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!-- タイトルなどのテキスト -->
+            <a class="navbar-brand" href="#">Designup.jp</a>
+
+          </div>
+
+          <!-- グローバルナビの中身 -->
+          <div class="collapse navbar-collapse" id="nav-menu-2">
+
+            <!-- フォーム -->
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="検索">
+              </div>
+              <button type="submit" class="btn btn-default">送信</button>
+            </form>
+
+
+            <!-- ボタン -->
+            <button type="button" class="btn btn-default navbar-btn">ボタン</button>
+
+
+            <!-- テキスト -->
+            <p class="navbar-text">ナビのテキスト</p>
+
+
+            <!-- リンク -->
+            <p class="navbar-text navbar-right">リンクは <a href="#" class="navbar-link">こちら</a></p>
+
+
+          </div>
+        </div>
+      </nav>
+
+      <h2>Navbar Fixed top</h2>
+
+      <!--
+        navbar-fixed-top : トップに固定するためのクラスを追加
+        navbar-fixed-bottom : フッターに固定
+        固定する場合はbodyのスタイルに padding-top: 70px; などのように追加する
+      -->
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+
+          <!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-3">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!-- タイトルなどのテキスト -->
+            <a class="navbar-brand" href="#">Designup.jp</a>
+
+          </div>
+
+          <!-- グローバルナビの中身 -->
+          <div class="collapse navbar-collapse" id="nav-menu-3">
+
+            <!-- 各ナビゲーションメニュー -->
+            <ul class="nav navbar-nav">
+
+              <!-- 通常のリンク -->
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+
+              <!-- ドロップダウンのメニューも配置可能 -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+
+          </div>
+        </div>
+      </nav>
+
+      <h2>Navbar Style</h2>
+
+      <!--
+        navbar-inverse : 黒いスタイルに変更
+        navbar-origin : オリジナルスタイルを当ててみると・・・
+      -->
+      <nav class="navbar navbar-default navbar-inverse" role="navigation">
+        <div class="container-fluid">
+
+          <!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-4">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!-- タイトルなどのテキスト -->
+            <a class="navbar-brand" href="#">Designup.jp</a>
+
+          </div>
+
+          <!-- グローバルナビの中身 -->
+          <div class="collapse navbar-collapse" id="nav-menu-4">
+
+            <!-- 各ナビゲーションメニュー -->
+            <ul class="nav navbar-nav">
+
+              <!-- 通常のリンク -->
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+
+              <!-- ドロップダウンのメニューも配置可能 -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+
+          </div>
+        </div>
+      </nav>
+
+      <h2>Navbar Original Style</h2>
+      <nav class="navbar navbar-default navbar-origin" role="navigation">
+        <div class="container-fluid">
+
+          <!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-4">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!-- タイトルなどのテキスト -->
+            <a class="navbar-brand" href="#">Designup.jp</a>
+
+          </div>
+
+          <!-- グローバルナビの中身 -->
+          <div class="collapse navbar-collapse" id="nav-menu-4">
+
+            <!-- 各ナビゲーションメニュー -->
+            <ul class="nav navbar-nav navbar-right">
+
+              <!-- 通常のリンク -->
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#">Portfolio</a></li>
+
+              <!-- ドロップダウンのメニューも配置可能 -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="fa fa-envelope"></i> Mail@mail.com</a></li>
+                  <li><a href="#"><i class="fa fa-phone"></i> 000-1111-2222</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+
+          </div>
+        </div>
+      </nav>
+
+      <hr>
+
+
+      <!--=================================================
+                             Form
+      ==================================================-->
+
+      <h2>Basic Form</h2>
+
+      <form role="form">
+
+        <!--
+          label : フォームのラベル
+          form-control : 入力欄や選択などのフォームパーツ
+          form-group : labelとform-groupを最適な位置に配置するために使う
+        -->
+        <div class="form-group">
+          <label for="exampleInputEmail1">メールアドレス</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="メールアドレス">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">パスワード</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="パスワード">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> ログイン状態を維持する
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">ログイン</button>
+      </form>
+
+
+      <h2>Inline Form</h2>
+
+      <!--
+        formタグにform-inlineを入れるだけ
+       -->
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputPassword2">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Sign in</button>
+      </form>
+
+
+      <h2>Column Layout Form</h2>
+
+      <form class="form-horizontal" role="form">
+
+        <!--
+          form-groupをrowとして使う例
+        -->
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">メール</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="メール">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">パスワード</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="パスワード">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> 記憶する
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">サインイン</button>
+          </div>
+        </div>
+      </form>
+
+      <h2>Form Parts</h2>
+
+      <!--
+        Formパーツの種類
+      -->
+      <form class="form-horizontal" role="form">
+
+        <!-- input -->
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Input</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" placeholder="メール">
+          </div>
+        </div>
+
+        <!-- textarea -->
+        <div class="form-group">
+          <label class="col-sm-2 control-label">textarea</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <!-- checkbox -->
+        <div class="form-group">
+          <label class="col-sm-2 control-label">checkbox</label>
+          <div class="col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+                check box
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- radio -->
+        <div class="form-group">
+          <label class="col-sm-2 control-label">radio</label>
+          <div class="col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                radio 1
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                radio 2
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- select -->
+        <div class="form-group">
+          <label class="col-sm-2 control-label">select</label>
+          <div class="col-sm-10">
+            <select class="form-control">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+
+      <h2>Form Sizing</h2>
+
+      <!--
+        Formの高さ調節
+      -->
+      <div class="controls">
+
+        <!-- 大 -->
+        <input class="form-control input-lg" type="text" placeholder=".input-lg">
+
+        <!-- 中 -->
+        <input class="form-control" type="text" placeholder="Default input">
+
+        <!-- 小 -->
+        <input class="form-control input-sm" type="text" placeholder=".input-sm">
+
+      </div>
+
+
+      <!--
+        Formの幅調節
+      -->
+      <div class="row">
+        <div class="col-xs-2">
+          <input type="text" class="form-control" placeholder=".col-xs-2">
+        </div>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" placeholder=".col-xs-3">
+        </div>
+        <div class="col-xs-4">
+          <input type="text" class="form-control" placeholder=".col-xs-4">
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- /container -->
+
+    <footer style="padding: 20px 0;">
+      <div class="container" style="text-align: center;">
+        copy 2014 <a href="http://designup.jp/">designup.jp</a> <a href="https://github.com/takeshi-du">@takeshi-du</a>
+      </div>
+    </footer>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

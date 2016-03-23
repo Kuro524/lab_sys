@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>学生用ログインフォーム</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      /* Navbarを固定しているので、その分空ける */
+
+    </style>
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+  </head>
+  <body>
+    <div id="header">
+        <!--サイトのヘッダーとかはここに書こう-->
+    </div>
+    <div class="container">
+     <div class="jumbotron col-md-8 col-md-offset-2">
+         <form role="form" method="post" action="login.php">
+            <div class="form-group">
+              <label for="exampleInputEmail1">学籍番号</label>
+              <input type="text" class="form-control" name="stu_id" placeholder="1145XXX(半角)" pattern="^[0-9]+$" autofocus required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">パスワード</label>
+              <input type="password" class="form-control" name="passwd" placeholder="パスワード" required>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> ログイン状態を維持する
+              </label>
+            </div>
+            <button type="submit" class="btn btn-default">ログイン</button>
+          </form>
+      </div>
+    </div>
+
+  <!--<body>-->
+    <!--<button type="file" name="file"class="btn btn-default">送信</button>
+
+    <button id="upload_chat_button" class="btn btn-small btn-inverse"><i class="icon-upload icon-white"></i></button>-->
+    <!--<input type="file" id="file" style="display:none;" onchange="$('#fake_input_file').val($(this).val())">-->
+    <!--<input type="button" value="ファイル選択" onClick="preview(this);">-->
+<!--<input id="fake_input_file" readonly type="text" value=""  onClick="$('#file').click();">
+<input type="submit" name="submit" value="送信" id="Submit">-->
+  </form>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
