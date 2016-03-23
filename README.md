@@ -1,35 +1,7 @@
-Bootstrap3-tutorials
+研究室配属システム
 ====================
 
-Bootstrap3 Basic Tutorials
+Lab_sys
 
-## Demo Page
-
-[Bootstrap Tutorial](http://takeshi-du.github.io/Bootstrap3-tutorials/)
-
-## Dropdown
-
-* nomal
-* header,disabled
-
-## ButtonGroup
-
-* Basic Button
-* Button Style
-* Button Group
-* Button Toolbar
-
-## Navbar
-
-* Basic Navbar
-* Other Navbar
-* Navbar Fixed top
-* Navbar Style
-* Navbar Original Style
-
-## Forms
-
-* Basic Form
-* Inline Form
-* Culmu Layout Form
-* Form Parts
+#開発チーム
+* Team /*NULL*/ with Kana
