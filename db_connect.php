@@ -1,5 +1,5 @@
 <?php
-require_once ("../../data/db_info.php");
+require_once ("../../../data/db_info.php");
 $link = mysqli_connect($server, $user, $password, $dbname);  //ここでDBへのアクセスを試みている(mysql_connect関数による)
 
 if ( mysqli_connect_errno() > 0 ) {
