@@ -5,6 +5,16 @@
     <title>日本工業大学 工学部情報工学科 研究室配属システム</title>
     <META http-eqiuv="Content-Type" content="text/html; charset=Shift_JIS">
     <link href="system.css" rel="stylesheet" type="text/css" media="screen">
+    <?php
+      error_reporting(E_ALL);
+      header("Content-type: text/html; charset=UTF-8");
+      require_once ("../db_connect.php");
+      session_start();
+      if(empty($_SESSION["ID"]))
+      {
+        header("Location: login.html");
+      }
+    ?>
   </head>
 
   <body>
@@ -24,10 +34,7 @@
         <p>
           ユーザー : <!--ログインしてる人の名前とか-->
           <?php
-            error_reporting(E_ALL);
-            header("Content-type: text/html; charset=UTF-8");
-            require_once ("../db_connect.php");
-            session_start();
+            //session_start();
             $id = $_SESSION["ID"];
             $sql_code = "SELECT student.name FROM student WHERE $id = student.id;";
             $result = mysqli_query($link, $sql_code);

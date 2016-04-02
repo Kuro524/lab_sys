@@ -1,102 +1,55 @@
 <!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Bootstrap3 Componets Tutorial</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="chrome=1">
+      <title>情報確認画面</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/main.css">
 
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    <script type="text/javascript" src="js/test.js"></script>
-    <!--<div class="head_img"></div>-->
-  </head>
-  <body>
-    <div class="container">
-<?php
-
-  $link = mysql_connect('localhost', 'user', 'pass');
-  $db_selected = mysql_select_db('database_name', $link);
-
-?>
-<h1>確認画面</h1>
-    <div class="form-group">
-      <body>
-        <div class="container">
-
-<!--            <div class="jumbotron col-md-6 col-md-offset-3">-->
-          <form role="form" method="post" action="test_id.php">
-
-          <?php
-            /*SELECT id,name,name_ruby
-            FROM student;*/
-            require_once ("db_connect.html");
-
-            $id=$_SESSION[id];
-
-            $sql_code="SELECT student.id, student.name, student.ruby FROM student WHERE $id = student.id;"
-            $result=mysqli_query($link, $sql_code);
-
-            if(mysql_affected_rows($link) < 1){
-              header("Location: login.html");
-            }
-            else{
-              while($data=mysqli_fetch_array($result)){
-                print $data[0] ."  ". $data[1] ." ". $data[2];
-              }
-            }
-            ?>
-
+      <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+      <script type="text/javascript" src="js/test.js"></script>
+      <?php
+        session_start();
+        if(empty($_SESSION["ID"]))
+        {
+          header("Location: login.html");
+        }
+        require_once ("../db_connect.php");
+        $id = $_SESSION["ID"];
+      ?>
+    </head>
+    <body>
+      <div class="container">
+        <div class="jumbotron col-md-8 col-md-offset-2">
+          <form role="form" action="touroku.php" method="post">
             <div class="form-group">
-              <b>ファイルのプレビュー(.gif .png .jpg .jpeg のみ):</b>
-              <div id="preview_field">
-                <form>
-                  <input type="file" name="file"  onchange="preview(this)" />
-                </form>
-              </div>
-
-
-              <div class="form-group">
-                <label>自己PR</label><br>
-                <?php echo htmlspecialchars($_GET['stu_pr']);?>
-                <!--
-                <tr>
-                  <td><php echo $_POST["stu_pr"] ></td>
-                </tr>
-              -->
-              </div>
-
-
-              <div class="form-group">
-                <label>希望する研究室</label><br>
-                <!--選んだやつをここで表示させる-->
-                <td><?php echo $_POST["hope_lab_id"] ?></td>
-
-
-              </div>
-
-              <!--どこへ送信するのか-->
-              <div class="form-group">
-                <button type="submit" class="btn btn-default">送信</button>
-              </div>
-
-              <form action="Registration.html">
-                <input type="submit" value="修正">
-              </form>
+              <label for="exampleInputEmail1">自己PR</label>
+              <textarea class="form-control" rows="3" type="text" name="stu_pr" readonly><?php echo $_POST["stu_pr"]; ?></textarea>
             </div>
-          </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">配属を希望する研究室</label>
+              <textarea class="form-control" rows="1" cols="6" type="text" readonly>
+                <?php
+                  $lab_code = $_POST["hope_lab_id"];
+                  $sql_code = "SELECT lab.name FROM lab WHERE $lab_code = lab.code;";
+                  $result = mysqli_query($link, $sql_code);
+                  while ($data = mysqli_fetch_array($result)){
+                      print $data[0];
+                  }
+                ?>
+              </textarea>
+              <input type="hidden" name="hope_lab_id" value=<?php print '"' . $lab_code . '"'; ?>>
+            </div>
+            <button type="submit" class="btn btn-info">この情報で登録する</button>
+            <a href=""><button class="btn btn-danger">この情報を修正する</button></a>
+          </form>
         </div>
-      </form>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
+      </div>
+    </body>
 </html>
