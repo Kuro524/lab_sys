@@ -43,6 +43,9 @@
             }
           ?>
         </p>
+        <p>
+          <a href="logout.php">ログアウト</a>
+        </p>
       </div>
       <!--===============▲ ログイン状況以上 ===============-->
 
@@ -74,10 +77,13 @@
             名前  ： 山田花子<br>
             配属先： ○○研究室<br>-->
             <?php
-              $sql_code = "SELECT student.name,lab.name FROM student,assignment,lab WHERE $id = student.id AND $id = assignment.stu_id AND assignment.judge_lab_id = lab.code;";
+              $sql_code = "SELECT student.name,lab.name,assignment.memo_comment FROM student,assignment,lab WHERE $id = student.id AND $id = assignment.stu_id AND assignment.judge_lab_id = lab.code;";
               $result = mysqli_query($link, $sql_code);
               while ($data = mysqli_fetch_array($result)){
                   print "名前  ： " . $data[0] . "<br />" . "配属先： " . $data[1] . "<br />";
+                  if (!empty($data[2])){
+                    print "連絡事項  ： " . $data[2] . "<br />";
+                  }
               }
             ?>
           </p>

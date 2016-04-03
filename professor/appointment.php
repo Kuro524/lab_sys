@@ -44,7 +44,7 @@
           }
           echo '<div class="form-group">';
           echo '<label for="exampleInputEmail1">自己PR</label>';
-          if (is_null($data[4])){
+          if (empty($data[4])){
             echo '<textarea class="form-control" rows="3" type="text" readonly>' . "未記入" . '</textarea>';
           }
           else{

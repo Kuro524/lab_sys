@@ -14,6 +14,10 @@
       {
         header("Location: prf_login.html");
       }
+      if(strlen($_SESSION["ID"]) != 2)
+      {
+        header("Location: prf_login.html");
+      }
     ?>
   </head>
 
@@ -42,6 +46,9 @@
                 print " " . $data[0] . "@" . $data[1];
             }
           ?>
+        </p>
+        <p>
+          <a href="logout.php">ログアウト</a>
         </p>
       </div>
       <!--===============▲ ログイン状況以上 ===============-->
@@ -95,10 +102,33 @@
             ?>
           </p>
 
-          <h3>研究室紹介</h3>
+          <h3>採用状況</h3>
+          <p>
+            <?php
+              $sql_code = "SELECT assignment.stu_id,student.name,student.name_ruby,course.name FROM (student,assignment) LEFT OUTER JOIN course ON student.s_course_cd = course.code WHERE $id = assignment.judge_lab_id AND student.id = assignment.stu_id;";
+              $result = mysqli_query($link, $sql_code);
+
+              if(mysqli_affected_rows($link) < 1){
+                print "<br />" . "現在、採用した学生はいません。";
+              }
+              else{
+                while ($data = mysqli_fetch_array($result)){
+                    if (is_null($data[3])){
+                      print $data[0] . " ： " . $data[1] . " (". $data[2] .")" . " @ " . "コース未配属" ."<br />";
+                    }
+                    else{
+                      print $data[0] . " ： " . $data[1] . " (". $data[2] .")" . " @ " . $data[3] ."<br />";
+                    }
+                }
+                print "<br />" . "以上 " . mysqli_affected_rows($link) . "名を採用しています。";
+              }
+            ?>
+          </p>
+
+          <h3>Topics</h3>
 
           <!--===============▼ コンテンツ ===============-->
-            <div id="contents">
+            <!--<div id="contents">
 
               <div class="contents_box">
                 <a href=""><img src="img/CN_img.jpg" class="contents_img" alt="CN">
@@ -130,7 +160,7 @@
                 <div class="contents_text"><p>○○研究室</p></div></a>
               </div>
 
-            </div>
+          </div>-->
             <!--===============▲ コンテンツ ===============-->
 
         </div>

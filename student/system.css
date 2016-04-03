@@ -65,6 +65,16 @@ h4 {
   text-align: right;
 }
 
+#user a {
+    color: #808080;
+    text-decoration: none;
+}
+
+#user a:hover {
+    color: #45b6cc;
+    border-bottom: 1px dotted #cccccc;
+}
+
 /*//// メイン ////*/
 #main {
   width: 100%;
