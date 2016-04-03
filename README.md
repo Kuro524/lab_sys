@@ -2,7 +2,6 @@
 ====================
 
 # 利用マニュアル
-***
 ## 共通項目
 <p>本システムは「課題発見ゼミ」における研究室希望調査業務のシステム化を目的として、「設計開発基礎演習Ⅱ」で開発されたシステムです。
 
@@ -38,7 +37,6 @@
 作成中
 
 # Futures
-***
 - 安定性の向上
 - trekとのアカウントの結合
 - 日工大Portal(UNIPA)との連携強化
@@ -48,7 +46,6 @@
 - and more...
 
 # 開発チーム
-***
 ## Team /＊NULL＊/
 ### プロジェクトリーダ
 #### Kota KONISHI
@@ -57,6 +54,7 @@
 * [Kuro's Lab(学内限定ブログ)](http://10.8.68.230/blog)
 * [Kuro on Twitter](https://twitter.com/kouta_e_kuro)
 * [Kuro on FaceBook](https://www.facebook.com/koutakonishi)
+
 > 疲れた！！！完成です！！@2016/04/03 気分転換にマニュアルとか書いてるなう！
 >
 > 研究室配属システム作成プロジェクトを担当させていただいたクロ(こと小西航太)です。
@@ -78,6 +76,7 @@
 ### プログラマ
 #### Keita UEDA
 * 日本工業大学 工学部情報工学科 ソフトウェア・デザインコース
+
 >> To Ue-chan From Kuro
 >>
 >> SQLクエリ周りは大分使わせてもらいました！
@@ -91,6 +90,7 @@
 
 #### Tatsumi KUSANO
 * 日本工業大学 工学部情報工学科 ソフトウェア・デザインコース
+
 >ここ後で考えるわ。
 >> To Tatsumin From Kuro
 >>
@@ -105,6 +105,7 @@
 
 #### Rikiya SATO
 * 日本工業大学 工学部情報工学科 ソフトウェア・デザインコース
+
 >3年から本気出す。
 >> To Rikiya From Kuro
 >>
@@ -122,6 +123,7 @@
 * 日本工業大学 工学部情報工学科 ヒューマンメディア・コース
 * [Kana on Twitter](https://twitter.com/o_kana52)
 * [Kana on FaceBook](https://www.facebook.com/kana.owada1)
+
 > デザインに何か不満があったら遠慮なくいってください。
 >
 > できる限りのことはします。
