@@ -18,7 +18,7 @@ if($result){
     exit;
 }
 else{
-    print "<h1>ERROR!</h1>" . $id . "/" . $lab_code . "/" . $std_pr . "/";
+    print "<h1>ERROR!</h1>";
     print "管理者@神林研究室 小西航太までお問い合わせ下さい！<br />";
     print 'お問い合わせは<a href="mailto:c1145217@cstu.nit.ac.jp">こちら</a>';
     exit;

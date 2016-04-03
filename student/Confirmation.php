@@ -47,7 +47,7 @@
               <input type="hidden" name="hope_lab_id" value=<?php print '"' . $lab_code . '"'; ?>>
             </div>
             <button type="submit" class="btn btn-info">この情報で登録する</button>
-            <a href=""><button class="btn btn-danger">この情報を修正する</button></a>
+            <a href="Registration.php"><button class="btn btn-danger">この情報を修正する</button></a>
           </form>
         </div>
       </div>

@@ -4,7 +4,7 @@ require_once ("../db_connect.php");
 $id = mysqli_real_escape_string($link, $_POST["stu_id"]);
 $passwd = mysqli_real_escape_string($link, $_POST["passwd"]);
 
-$sql_code = "SELECT student.id FROM student WHERE $id = student.id AND $passwd = student.passwd;";
+$sql_code = "SELECT student.id FROM student WHERE $id = student.id AND '$passwd' = student.passwd;";
 $result = mysqli_query($link, $sql_code);
 
 if (mysqli_affected_rows($link) < 1 OR mysqli_affected_rows($link) > 2){
